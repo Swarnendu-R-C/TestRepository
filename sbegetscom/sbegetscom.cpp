@@ -109,6 +109,7 @@ int main()
         uint32_t ocmb_index = pdbg_target_index(ocmb);
 		uint32_t fapipos = 0;
         pdbg_target_get_attribute(ocmb, "ATTR_FAPI_POS", 4, 1, &fapipos);
+	/*
         if(chipId == ODYSSEY_CHIP_ID)
         {
 			std::cout << "calling probe ocmb target index " << pdbg_target_index(ocmb) << std::endl;
@@ -124,8 +125,8 @@ int main()
             std::cout << "odyssesy getscom " << std::hex << " index=0x" << pdbg_target_index(ocmb) << " fapipos=0x" << fapipos
                 << std::hex << " addr=" << addr << " value "  << "0x" << origval  << " ret " << ret << std::endl;  
         }
-        /*
         else
+       	*/ 
         {
             uint64_t origval = 0;
             uint64_t modval = 0;
@@ -137,7 +138,6 @@ int main()
             std::cout << "-------------------------------------------------" << std::endl;
             std::cout << std::endl;
         }
-        */
     }           
     return 0;
 }
